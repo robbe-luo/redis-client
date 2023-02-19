@@ -1,6 +1,7 @@
 import { join } from 'path';
 import { RollupOptions } from 'rollup';
 import json from '@rollup/plugin-json';
+import typescript from '@rollup/plugin-typescript';
 
 const baseDir = process.cwd();
 
@@ -13,7 +14,7 @@ const config: RollupOptions = {
     dir: 'dist/main',
     format: 'cjs',
   },
-  plugins: [json()],
+  plugins: [json(), typescript()],
 };
 
 export default config;
